@@ -3,16 +3,16 @@ import { Phone, Mail, MapPin, ChevronRight, CheckCircle2, Shield, Settings, Lapt
 import { motion, useScroll, useSpring } from 'framer-motion'
 import logo from './assets/images/logo.png'
 import whatsappIcon from './assets/images/whatsapp.svg'
-import floorTopImg from './assets/images/floor_top_counter.png'
-import desktopImg from './assets/images/desktop_counter.png'
-import looseNoteImg from './assets/images/loose_note_counter.png'
+import floorTopImg from './assets/images/products/Floor Top Currency Counting Machine.png'
+import desktopImg from './assets/images/products/Desktop Currency Counting Machine.png'
+import looseNoteImg from './assets/images/products/Loose Note Counting Machine.png'
 import heroBg from './assets/images/hero_bg.png'
-import sk105Img from './assets/images/sk_105.png'
-import sk555Img from './assets/images/sk_555.png'
-import sk555aImg from './assets/images/sk_555a.png'
-import sk5Img from './assets/images/sk_5.png'
-import sk25Img from './assets/images/sk_2_5.png'
-import sk25bImg from './assets/images/sk_2_5b.png'
+import digitalDisplayBoardImg from './assets/images/products/Digital Display Board.png'
+import sk555Img from './assets/images/products/32 Inch Digital Wall Mount Display.png'
+import sk555aImg from './assets/images/products/Rechargable LED Table Top Stand.png'
+import sk5Img from './assets/images/products/Fake Note Detector LED sk-5.png'
+import sk25Img from './assets/images/products/Fake Note Detector LED sk-2.5.png'
+import sk25bImg from './assets/images/products/Fake Note Detector LED sk-2.5B.png'
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -38,6 +38,7 @@ const App = () => {
       name: 'Floor Top Currency Counting Machine',
       model: 'SK-FT55',
       image: floorTopImg,
+      bgColor: '#F3F6FF',
       specs: [
         'Feed Method: Vacuum Type',
         'Counting Speed: 100 pcs in 3 sec',
@@ -52,6 +53,7 @@ const App = () => {
       name: 'Desktop Currency Counting Machine',
       model: 'SK-D50',
       image: desktopImg,
+      bgColor: '#FDF8F3',
       specs: [
         'Feed Method: Vacuum Type',
         'Counting Speed: 100 pcs in 3 sec',
@@ -66,6 +68,7 @@ const App = () => {
       name: 'Loose Note Counting Machine',
       model: 'SK-15',
       image: looseNoteImg,
+      bgColor: '#F5F9F5',
       specs: [
         'Automatic start, stop and clear',
         'UV, MG, IR detection',
@@ -77,15 +80,16 @@ const App = () => {
     },
     {
       id: 'sk105',
-      name: 'Currency Authentication & Sorting Machine',
-      model: 'SK-105',
-      image: sk105Img,
+      name: 'Digital Display Board',
+      model: 'SK-DISPLAY',
+      image: digitalDisplayBoardImg,
+      bgColor: '#F8F5FF',
       specs: [
-        'Multi-currency counting & sorting',
-        'Advanced fake note detection',
-        'High-speed processing',
-        'User-friendly interface',
-        'Heavy-duty industrial build'
+        'High brightness LED display',
+        'Customizable message content',
+        'Multi-language support',
+        'Easy setup and management',
+        'Durable aluminum housing'
       ]
     },
     {
@@ -93,6 +97,7 @@ const App = () => {
       name: '32 Inch Digital Wall Mount Display',
       model: 'SK-555',
       image: sk555Img,
+      bgColor: '#FFF9F5',
       specs: [
         'Screen Size: 32"',
         'Resolution: 1920 x 1080',
@@ -107,6 +112,7 @@ const App = () => {
       name: 'Rechargable LED Table Top Stand',
       model: 'SK-555A',
       image: sk555aImg,
+      bgColor: '#F5FFFF',
       specs: [
         'Size: A4',
         'Type: Rechargeable LED',
@@ -121,6 +127,7 @@ const App = () => {
       name: 'Fake Note Detector LED',
       model: 'SK-5',
       image: sk5Img,
+      bgColor: '#FFFDF5',
       specs: [
         'Power consumption: 11W max',
         'Magnifying glass: 140x60mm',
@@ -133,6 +140,7 @@ const App = () => {
       name: 'Fake Note Detector LED',
       model: 'SK-2.5',
       image: sk25Img,
+      bgColor: '#FBF5F5',
       specs: [
         'Power Voltage: DC5V-1 AMP',
         'Power Consumption: 3W',
@@ -146,6 +154,7 @@ const App = () => {
       name: 'Fake Note Detector LED',
       model: 'SK-2.5b',
       image: sk25bImg,
+      bgColor: '#F9F9F9',
       specs: [
         'Power Voltage: DC5V-1 AMP',
         'Power Consumption: 3W',
@@ -295,8 +304,8 @@ const App = () => {
                 whileHover={{ y: -10 }} 
                 style={{ background: '#fff', border: '1px solid #eee', borderRadius: '15px', overflow: 'hidden', boxShadow: 'var(--shadow)', display: 'flex', flexDirection: 'column' }}
               >
-                <div style={{ padding: '20px', background: '#f8f9fa', height: '260px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={p.image} alt={p.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                <div style={{ padding: '20px', background: p.bgColor || '#f8f9fa', height: '260px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={p.image} alt={p.name} style={{ maxWidth: '85%', maxHeight: '85%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.1))' }} />
                 </div>
                 <div style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ marginBottom: '15px' }}>
