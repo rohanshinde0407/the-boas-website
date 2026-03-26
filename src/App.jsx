@@ -255,7 +255,7 @@ const App = () => {
               transition={{ duration: 1 }}
               style={{ fontSize: 'min(4.5rem, 11vw)', color: '#fff', marginBottom: '20px', fontWeight: 800, textShadow: '0 4px 10px rgba(0,0,0,0.3)' }}
             >
-              Advance Banking & <br/><span style={{ color: '#c19a6b' }}>Retail Automation</span>
+              Advance Banking & <br/><span style={{ color: '#c19a6b' }}>Office Automation Service </span>
             </motion.h1>
             <p style={{ fontSize: '1.2rem', maxWidth: '600px', marginBottom: '30px', opacity: 0.9, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
               Industry Leading Excellence. Precision engineered currency solutions for modern banking needs. Reliable, accurate, and high-performance automation.
