@@ -319,7 +319,15 @@ const App = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ textAlign: 'center', fontSize: '0.9rem' }}>Inquire Now</a>
+                  <a 
+                    href={`${whatsappLink}?text=${encodeURIComponent(`Hello, I am interested in ${p.name}. Please share more details.`)}`} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="btn btn-primary" 
+                    style={{ textAlign: 'center', fontSize: '0.9rem' }}
+                  >
+                    Inquire Now
+                  </a>
                 </div>
               </motion.div>
             ))}
