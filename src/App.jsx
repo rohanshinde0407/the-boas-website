@@ -181,12 +181,12 @@ const App = () => {
       {/* Header */}
       <nav className="header" style={{ position: 'fixed', top: 0, width: '100%', background: '#fff', zIndex: 1000, padding: '10px 0', borderBottom: '1px solid #eee' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <img src={logo} alt="BOAS Logo" style={{ height: '40px' }} />
-            <div style={{ lineHeight: 1.1 }}>
-              <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#1a2a4e' }}>BOAS</span><br/>
-              <span className="mobile-hide" style={{ fontSize: '0.6rem', color: '#666', fontWeight: 500 }}>Bank & Retail Automation</span>
-            </div>
+          <div className="logo-link">
+            <img 
+              src={logo} 
+              alt="BOAS - Bank Office Automation Service" 
+              className="header-logo"
+            />
           </div>
           
           {/* Desktop Nav */}
@@ -197,9 +197,9 @@ const App = () => {
             <a href="#contact">Contact</a>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-            <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '5px', background: '#25D366', borderColor: '#25D366', padding: '8px 15px', fontSize: '0.85rem' }}>
-              <img src={whatsappIcon} alt="WhatsApp" style={{ width: '16px', height: '16px', filter: 'brightness(0) invert(1)' }} /> <span className="mobile-hide">Chat with Us</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '5px', background: '#25D366', borderColor: '#25D366', padding: '6px 12px', fontSize: '0.8rem' }}>
+              <img src={whatsappIcon} alt="WhatsApp" style={{ width: '14px', height: '14px', filter: 'brightness(0) invert(1)' }} /> <span className="mobile-hide">Chat with Us</span>
             </a>
             
             {/* Mobile Menu Toggle */}
@@ -208,7 +208,7 @@ const App = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               style={{ background: 'none', border: 'none', color: '#1a2a4e', cursor: 'pointer', padding: '5px' }}
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -255,7 +255,7 @@ const App = () => {
               transition={{ duration: 1 }}
               style={{ fontSize: 'min(4.5rem, 11vw)', color: '#fff', marginBottom: '20px', fontWeight: 800, textShadow: '0 4px 10px rgba(0,0,0,0.3)' }}
             >
-              Advance Banking & <br/><span style={{ color: '#c19a6b' }}>Office Automation Service </span>
+              Advance Banking & <br/><span style={{ color: '#c19a6b' }}>Office Retail Automation</span>
             </motion.h1>
             <p style={{ fontSize: '1.2rem', maxWidth: '600px', marginBottom: '30px', opacity: 0.9, textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
               Industry Leading Excellence. Precision engineered currency solutions for modern banking needs. Reliable, accurate, and high-performance automation.
@@ -412,7 +412,7 @@ const App = () => {
       {/* Footer */}
       <footer style={{ padding: '40px 0', background: '#0a101f', color: '#fff', textAlign: 'center' }}>
         <div className="container">
-          <p style={{ opacity: 0.6 }}>© 2026 BOAS - Advance Banking & Office Retail Automation Products. All Rights Reserved.</p>
+          <p style={{ opacity: 0.6 }}>© 2026 BOAS - Bank Office Automation Service. All Rights Reserved.</p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '20px', opacity: 0.6, fontSize: '0.9rem' }}>
             <a href="#home">Privacy Policy</a>
             <a href="#home">Terms of Service</a>
