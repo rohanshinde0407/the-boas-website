@@ -141,6 +141,12 @@ img {
   .container { padding: 0 40px; }
 }
 
+@media (max-width: 1024px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   html { font-size: 14px; }
   .section { padding: 60px 0; }
@@ -156,9 +162,6 @@ img {
 }
 
 @media (max-width: 640px) {
-  .mobile-hide {
-    display: none !important;
-  }
   .section {
     padding: 40px 0;
   }
@@ -170,6 +173,52 @@ img {
   }
 }
 
+/* Responsive Logo & Header Helpers */
+.header-logo {
+  height: 45px;
+  width: 315px; /* 7:1 ratio specifically for the horizontal brand asset */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  max-width: 100%;
+  transition: var(--transition);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .header-logo {
+    width: 280px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    width: 245px;
+    height: 35px;
+  }
+}
+
 @media (max-width: 480px) {
-  html { font-size: 13px; }
+  .header-logo {
+    width: 190px;
+    height: 27px; /* Maintain approx 7:1 ratio */
+  }
+  
+  .header .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-logo {
+    width: 160px;
+    height: 23px;
+  }
 }
